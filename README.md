@@ -28,6 +28,8 @@ http://localhost:8000/
 
 Este proyecto está preparado para ejecutarse en un contenedor Docker usando Nginx, lo cual es compatible con Mac, Windows y Linux.
 
+#### Opción A: con Docker Compose
+
 1. Desde la carpeta del proyecto, construye y levanta el contenedor:
 
 ```bash
@@ -44,6 +46,20 @@ http://localhost:8080
 
 ```bash
 docker compose down
+```
+
+#### Opción B: con docker run
+
+Si prefieres ejecutar la imagen directamente, usa este comando:
+
+```bash
+docker run -d -p 8080:80 consumo-api-rest-jahir
+```
+
+Luego abre:
+
+```text
+http://localhost:8080
 ```
 
 ## Funcionalidades implementadas
