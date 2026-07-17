@@ -1,0 +1,6 @@
+services:
+  consumo-api-rest:
+    build: .
+    container_name: consumo-api-rest
+    ports:
+      - "8080:80"
