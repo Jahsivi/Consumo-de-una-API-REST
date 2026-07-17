@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consumo de la API REST - JSONPlaceholder</title>
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="hero">
+        <h1>Consumo de la API REST</h1>
+        <p>Consultar, filtrar y simulación para crear, actualizar y eliminar publicaciones desde JSONPlaceholder.</p>
+      </header>
+
+      <section class="panel">
+        <h2>Operaciones disponibles</h2>
+
+        <div class="grid">
+          <article class="card">
+            <h3>Listar publicaciones</h3>
+            <button id="btnListar">Obtener todas</button>
+          </article>
+
+          <article class="card">
+            <h3>Consultar por ID</h3>
+            <input id="postId" type="number" placeholder="Ej. 1" />
+            <button id="btnBuscarId">Buscar publicación</button>
+          </article>
+
+          <article class="card">
+            <h3>Filtrar por usuario</h3>
+            <input id="userId" type="number" placeholder="Ej. 2" />
+            <button id="btnFiltrarUsuario">Filtrar por usuario</button>
+          </article>
+        </div>
+
+        <div class="grid">
+          <article class="card">
+            <h3>Crear publicación</h3>
+            <form id="formCrear">
+              <input id="crearTitulo" type="text" placeholder="Título" required />
+              <textarea id="crearCuerpo" placeholder="Contenido" required></textarea>
+              <input id="crearUsuario" type="number" placeholder="ID usuario" required />
+              <button type="submit">Crear publicación</button>
+            </form>
+          </article>
+
+          <article class="card">
+            <h3>Actualizar título</h3>
+            <form id="formActualizar">
+              <input id="actualizarId" type="number" placeholder="ID publicación" required />
+              <input id="actualizarTitulo" type="text" placeholder="Nuevo título" required />
+              <button type="submit">Actualizar título</button>
+            </form>
+          </article>
+
+          <article class="card">
+            <h3>Eliminar publicación</h3>
+            <input id="eliminarId" type="number" placeholder="ID publicación" />
+            <button id="btnEliminar">Eliminar</button>
+          </article>
+        </div>
+      </section>
+
+      <section class="status" id="statusMessage">Listo para consultar la API.</section>
+
+      <section class="results" id="resultsContainer">
+        <p class="placeholder">Aquí aparecerán las publicaciones obtenidas.</p>
+      </section>
+    </main>
+
+    <script src="src/app.js"></script>
+  </body>
+</html>
