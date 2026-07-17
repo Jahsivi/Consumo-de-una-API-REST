@@ -53,7 +53,8 @@ docker compose down
 Si prefieres ejecutar la imagen directamente, usa este comando:
 
 ```bash
-docker run -d -p 8080:80 consumo-api-rest-jahir
+docker run -d -p 8080:80 --name mi-proyecto-api jikuo/consumo-api-rest-jahir:latest
+
 ```
 
 Luego abre:
